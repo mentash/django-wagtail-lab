@@ -183,3 +183,8 @@ WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'tx
 
 # Maximum upload size for documents in bytes.
 WAGTAILDOCS_MAX_UPLOAD_SIZE = 10 * 1024 * 1024  # 10MB
+
+
+# Configure Wagtail to use the custom image model defined in apps/images/models.py
+WAGTAILIMAGES_IMAGE_MODEL = "images.CustomImage"
+

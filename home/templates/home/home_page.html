@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -14,6 +15,15 @@
 
 {% if page.body %}
     {{ page.body|richtext }}
+{% endif %}
+
+{% if page.image %}
+    {% image page.image fill-150x150 format-jpeg %}
+
+    {# Save the image to a variable and use it in the template#}
+    {% image page.image fill-150x150 format-jpeg as profile_img %}
+    {{ profile_img.url }}
+
 {% endif %}
 
 
